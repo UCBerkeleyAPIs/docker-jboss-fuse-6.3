@@ -1,5 +1,5 @@
-DOCKER_IMAGE_NAME=dwi67/jboss-fuse-6.3
-DOCKER_IMAGE_VERSION=latest
+DOCKER_IMAGE_NAME=artnaseef/jboss-fuse-6.3
+DOCKER_IMAGE_VERSION=redhat-329
 
 docker rmi --force=true ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION}
 docker build --force-rm=true --rm=true -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_VERSION} .

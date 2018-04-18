@@ -1,7 +1,7 @@
-# Use latest dwi67/jboss-fuse-6.3-admin image as the base
-FROM dwi67/jboss-fuse-6.3-admin
+# Use latest artnaseef/jboss-fuse-6.3-admin image as the base
+FROM artnaseef/jboss-fuse-6.3-admin:redhat-329
 
-MAINTAINER Dieter Wijngaards <dieter.wijngaards@adesso.ch>
+MAINTAINER Arthur Naseef <artnaseef@apache.org>
 
 USER root
 

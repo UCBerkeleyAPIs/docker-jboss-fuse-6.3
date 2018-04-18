@@ -1,7 +1,7 @@
 version: '2'
 services:
   admin:
-    image: dwi67/jboss-fuse-6.3-fabric
+    image: artnaseef/jboss-fuse-6.3-fabric:redhat-329
     ports:
       - "8181:8181"
       - "8101:8101"
@@ -13,25 +13,25 @@ services:
       - SSH_PASSWD=admin
       - MANAGED_HOSTS=root1,root2,root3,root4
   root1:
-    image: dwi67/jboss-fuse-6.3-ssh
+    image: artnaseef/jboss-fuse-6.3-ssh:redhat-329
     ports:
        - "9122:22"
        - "8191:8181"
        - "8111:8101"
   root2:
-    image: dwi67/jboss-fuse-6.3-ssh
+    image: artnaseef/jboss-fuse-6.3-ssh:redhat-329
     ports:
        - "9222:22"
        - "8192:8181"
        - "8112:8101"
   root3:
-    image: dwi67/jboss-fuse-6.3-ssh
+    image: artnaseef/jboss-fuse-6.3-ssh:redhat-329
     ports:
        - "9322:22"
        - "8193:8181"
        - "8113:8101"
   root4:
-    image: dwi67/jboss-fuse-6.3-ssh
+    image: artnaseef/jboss-fuse-6.3-ssh:redhat-329
     ports:
        - "9422:22"
        - "8194:8181"

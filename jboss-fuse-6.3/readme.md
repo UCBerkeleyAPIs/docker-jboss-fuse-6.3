@@ -8,7 +8,7 @@ doesn't support jboss fuse 6.3 due to several changes to maven repository settin
 
 You can then run a Fuse server with the following command:
 
-    docker run -it dwi67/jboss-fuse-6.3 bin/fuse
+    docker run -it artnaseef/jboss-fuse-6.3:redhat-329 bin/fuse
 
 Note that the web console will not be accessible since we have not yet defined users that can log into it
 and have not exposed the web console port on the docker host.
@@ -23,17 +23,17 @@ First, create a `users.properties` file that contains your users, passwords, and
 
 Then create a Dockerfile with the following content:
 
-    FROM dwi67/jboss-fuse-6.3
+    FROM artnaseef/jboss-fuse-6.3:redhat-329
     COPY users.properties /opt/jboss/jboss-fuse/etc/
     
 
 Then you can build a new Docker image using the following command:
 
-    docker build --tag=dwi67/jboss-fuse-6.3-admin .
+    docker build --tag=artnaseef/jboss-fuse-6.3-admin:redhat-329 .
 
 Run your new image:
 
-    docker run -it -p 8181:8181 dwi67/jboss-fuse-6.3-admin
+    docker run -it -p 8181:8181 artnaseef/jboss-fuse-6.3-admin:redhat-329
 
 The administration console should be available at [http://localhost:8181/hawtio](http://localhost:8181/hawtio)
 
@@ -70,4 +70,4 @@ Fuse is installed in the `/opt/jboss/jboss-fuse` directory.
 
 ### Source
 
-The source is [available on GitHub](https://github.com/dwi67/docker-jboss-fuse-6.3).
+The source is [available on GitHub](https://github.com/artnaseef/docker-jboss-fuse-6.3).

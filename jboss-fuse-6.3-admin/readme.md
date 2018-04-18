@@ -6,7 +6,7 @@ This project builds a Docker image for [JBoss Fuse](http://www.jboss.org/product
 
 Run the image:
 
-    docker run -it -p 8181:8181 dwi67/jboss-fuse-6.3-admin
+    docker run -it -p 8181:8181 artnaseef/jboss-fuse-6.3-admin:redhat-329
 
 The administration console should be available at [http://localhost:8181/hawtio](http://localhost:8181/hawtio)
 
@@ -43,4 +43,4 @@ Fuse is installed in the `/opt/jboss/jboss-fuse` directory.
 
 ### Source
 
-The source is [available on GitHub](https://github.com/dwi67/docker-jboss-fuse-6.3).
+The source is [available on GitHub](https://github.com/artnaseef/docker-jboss-fuse-6.3).

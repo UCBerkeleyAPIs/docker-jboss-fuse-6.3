@@ -6,7 +6,7 @@ This project builds an ssh accessible docker image for [JBoss Fuse](http://www.j
 
 Run the image:
 
-    docker run -it -p 22:22 dwi67/jboss-fuse-6.3-ssh
+    docker run -it -p 22:22 artnaseef/jboss-fuse-6.3-ssh:redhat-329
 
 The image can be accessed using:
 
@@ -34,6 +34,6 @@ The server is run as the `jboss` user which has the uid/gid set to `1000`.
 
 ### Source
 
-The source is [available on GitHub](https://github.com/dwi67/docker-jboss-fuse-6.3-ssh).
+The source is [available on GitHub](https://github.com/artnaseef/docker-jboss-fuse-6.3-ssh).
 
 

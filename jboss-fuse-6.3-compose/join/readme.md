@@ -13,4 +13,4 @@ The administration console of the fabric server should be available at [http://l
 
 ### Source
 
-The source is [available on GitHub](https://github.com/dwi67/docker-jboss-fuse-6.3-compose/join).
+The source is [available on GitHub](https://github.com/artnaseef/docker-jboss-fuse-6.3-compose/join).
