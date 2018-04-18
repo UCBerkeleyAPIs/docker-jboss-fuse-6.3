@@ -1,10 +1,10 @@
 # Use latest jboss/base-jdk:8 image as the base
 FROM jboss/base-jdk:8
 
-MAINTAINER Dieter Wijngaards <dieter.wijngaards@bluewin.ch>
+MAINTAINER Arthur Naseef <artnaseef@apache.org>
 
 # Set the FUSE_VERSION env variable
-ENV FUSE_VERSION 6.3.0.redhat-254
+ENV FUSE_VERSION 6.3.0.redhat-329
 
 # If the container is launched with re-mapped ports, these ENV vars should
 # be set to the remapped values.
