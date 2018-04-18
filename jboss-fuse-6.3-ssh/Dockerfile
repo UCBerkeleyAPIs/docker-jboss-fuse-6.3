@@ -1,6 +1,6 @@
 FROM jboss/base-jdk:8
 
-MAINTAINER Dieter Wijngaards <dieter.wijngaards@adesso.ch>
+MAINTAINER Arthur Naseef <artnaseef@apache.org>
 
 USER root
 
