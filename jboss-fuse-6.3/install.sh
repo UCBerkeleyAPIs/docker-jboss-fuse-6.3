@@ -6,7 +6,8 @@
 
 # Adjust the following env vars if needed.
 FUSE_ARTIFACT_ID=jboss-fuse-karaf
-FUSE_DISTRO_URL=https://maven.repository.redhat.com/ga/org/jboss/fuse/${FUSE_ARTIFACT_ID}/${FUSE_VERSION}/${FUSE_ARTIFACT_ID}-${FUSE_VERSION}.zip
+FUSE_DISTRO_BASENAME="${FUSE_ARTIFACT_ID}-${FUSE_VERSION}-baseline.zip"
+FUSE_DISTRO_URL="https://maven.repository.redhat.com/ga/org/jboss/fuse/${FUSE_ARTIFACT_ID}/${FUSE_VERSION}/${FUSE_DISTRO_BASENAME}"
 
 # Lets fail fast if any command in this script does succeed.
 set -e
@@ -17,10 +18,10 @@ set -e
 cd /opt/jboss
 
 # Download and extract the distro
-curl -O ${FUSE_DISTRO_URL}
-jar -xvf ${FUSE_ARTIFACT_ID}-${FUSE_VERSION}.zip
-rm ${FUSE_ARTIFACT_ID}-${FUSE_VERSION}.zip
-mv jboss-fuse-${FUSE_VERSION} jboss-fuse
+curl -O "${FUSE_DISTRO_URL}"
+jar -xvf "${FUSE_DISTRO_BASENAME}"
+rm "${FUSE_DISTRO_BASENAME}"
+mv "jboss-fuse-baseline-${FUSE_VERSION}" jboss-fuse
 chmod a+x jboss-fuse/bin/*
 rm jboss-fuse/bin/*.bat jboss-fuse/bin/start jboss-fuse/bin/stop jboss-fuse/bin/status jboss-fuse/bin/patch
 
